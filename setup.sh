@@ -13,6 +13,11 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Terminal - Install Theme Customizer
 brew install jandedobbeleer/oh-my-posh/oh-my-posh
 
+# Terminall - Create .cache folder to hold cache files from Oh My Posh
+if [ ! -d "/Users/$(whoami)/.cache" ]; then
+    mkdir ~/.cache
+fi
+
 # Terminal - Install Font
 oh-my-posh font install meslo
 
@@ -32,5 +37,5 @@ echo "Enter Your Git Email: "
 read email
 git config --global user.email $email
 
-# Create Directory for cloned Git Repos
+# Git - Create Directory for cloned Git Repos
 mkdir ~/Git
