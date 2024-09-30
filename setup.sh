@@ -28,7 +28,9 @@ echo 'eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/mi
 brew install git
 brew link --overwrite git # Forces manual Git install precedence over Apple Git installed by Xcode CLT install during Homebrew install
 
-# Git - Configure Credentials
+# Git - Configure 
+git config --global init.defaultBranch main
+
 echo "Enter Your Git Username: "
 read user
 git config --global user.name $user
