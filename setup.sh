@@ -1,4 +1,4 @@
-#! /bin/zsh
+#!/bin/zsh
 
 # Homebrew - Install
 curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
@@ -14,9 +14,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew install jandedobbeleer/oh-my-posh/oh-my-posh
 
 # Terminall - Create .cache folder to hold cache files from Oh My Posh
-if [ ! -d "/Users/$(whoami)/.cache" ]; then
-    mkdir ~/.cache
-fi
+mkdir /Users/$(whoami)/.cache
 
 # Terminal - Install Font
 oh-my-posh font install meslo
